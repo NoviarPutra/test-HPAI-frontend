@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home, NotFound, SignIn, SignUp } from "./pages";
+import { Home, Layouts, NotFound, SignIn, SignUp } from "./pages";
 import { ProtectedRoutes, UnprotectedRoutes } from "./utils";
 
 function App() {
@@ -7,7 +7,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<ProtectedRoutes />}>
-          <Route index element={<Home />} />
+          <Route path='/' element={<Layouts />}>
+            <Route index element={<Home />} />
+          </Route>
         </Route>
 
         <Route path='/' element={<UnprotectedRoutes />}>

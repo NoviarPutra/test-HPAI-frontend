@@ -1,11 +1,11 @@
 import React from "react";
-import { FormLogin } from "../components";
+import { FormSignIn } from "../components";
 
 const SignIn = () => {
   return (
     <div className='container'>
       <div className='d-flex justify-content-center align-items-center vh-100'>
-        <FormLogin />
+        <FormSignIn />
       </div>
     </div>
   );
